@@ -1,14 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Ideas</h1>
+<%= link_to "Add a new idea", new_idea_path, class: "btn btn-primary mb-3" %>
 
-<div id="ideas">
+<div class="list-group w-auto">
   <% @ideas.each do |idea| %>
     <%= render idea %>
-    <p>
-      <%= link_to "Show this idea", idea %>
-    </p>
   <% end %>
 </div>
-
-<%= link_to "New idea", new_idea_path %>

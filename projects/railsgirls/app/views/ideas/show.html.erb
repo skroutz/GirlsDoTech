@@ -14,3 +14,19 @@
   <%= link_to "Back to ideas", ideas_path, class: "btn btn-outline-secondary" %>
   <%= button_to "Destroy this idea", @idea, method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "Are you sure?" } } %>
 </div>
+
+<h2>Comments</h2>
+<% if @comments.any? %>
+  <% @comments.each do |comment| %>
+    <div>
+      <p><strong><%= comment.user_name %></strong></p>
+      <p><%= comment.body %></p>
+      <%= button_to "Destroy this comment", idea_comment_path(@idea, comment), method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "Are you sure?" } } %>
+    </div>
+  <% end %>
+<% else %>
+  <p>No comments found.</p>
+<% end %>
+
+<h2>Add a new comment</h2>
+<%= render partial: "comments/form", locals: { idea: @idea } %>

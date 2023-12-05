@@ -11,7 +11,7 @@
 
   <p>
     <strong>Picture:</strong>
-    <%= idea.picture %>
+    <%= image_tag(idea.picture_url, width: 600) if idea.picture? %>
   </p>
 
 </div>

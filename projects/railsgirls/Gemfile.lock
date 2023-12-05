@@ -257,6 +257,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  mini_magick
   puma (>= 5.0)
   rails (~> 7.1.2)
   selenium-webdriver

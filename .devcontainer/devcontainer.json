@@ -4,8 +4,11 @@
         "cpus": 2
     },
     "waitFor": "onCreateCommand",
-    "updateContentCommand": "gem install bundler rails",
+    "onCreateCommand": "gem install bundler rails",
+    "updateContentCommand": "",
     "postCreateCommand": "",
+    "postStartCommand": "",
+    "postAttachCommand": "",
     "customizations": {
         "vscode": {
             "extensions": [

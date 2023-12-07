@@ -1,10 +1,12 @@
-# GirlsDoTech
+# Skroutz Girls Do Tech
 
-[Rails Girls Guides](https://guides.railsgirls.com/)
+- [Rails Girls Guides](https://guides.railsgirls.com/)
+  - **[4. Build Your First App](https://guides.railsgirls.com/app)**
+
 
 ## Chapter 4: Build Your First App
 
-Σε αυτό το κεφάλαιο, αμέσως μετά το βήμα `cd railsgirls` και πριν εκτελέσετε την εντολή `rails server` θα χρειαστεί να αντιγράψετε τις παρακάτω γραμμές στο τέλος του αρχείου `railsgirls/config/development.rb` ακριβώς πάνω από την εντολή `end`:
+Σε αυτό το κεφάλαιο, αμέσως μετά το βήμα `cd railsgirls` και πριν εκτελέσετε την εντολή `rails server` θα χρειαστεί να αντιγράψετε τις παρακάτω γραμμές στο τέλος του αρχείου `projects/railsgirls/config/environments/development.rb` ακριβώς πάνω από την εντολή `end`:
 
 ```ruby
   pf_domain = ENV['GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN']
@@ -21,8 +23,8 @@
 
 
 
-## Chapters
-- **[4. Build Your First App](https://guides.railsgirls.com/app)**
+## All chapters
+- [4. Build Your First App](https://guides.railsgirls.com/app)
 - [5. Style your app using HTML and CSS](https://guides.railsgirls.com/html-and-css)
 - [6. Add a new page to your app](https://guides.railsgirls.com/new-page)
 - [7. Add a new homepage to your app](https://guides.railsgirls.com/new-homepage)

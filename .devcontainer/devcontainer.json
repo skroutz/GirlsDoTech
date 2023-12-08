@@ -5,7 +5,7 @@
     },
     "waitFor": "onCreateCommand",
     "updateContentCommand": "gem install bundler rails",
-    "postCreateCommand": "",
+    "postCreateCommand": "cd projects/railsgirls; bundle install; rails db:migrate",
     "customizations": {
         "vscode": {
             "extensions": [

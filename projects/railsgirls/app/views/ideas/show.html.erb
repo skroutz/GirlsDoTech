@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="<%= dom_id @idea %>" class="d-flex gap-3 py-3">
+  <div class="d-flex flex-column gap-2 w-100">
+    <h1><%= @idea.name %></h1>
+    <p><%= @idea.description %></p>
+    <small class="opacity-50 text-nowrap">Last updated <%= time_ago_in_words @idea.updated_at %></small>
+  </div>
+  <%= image_tag(@idea.picture_url, width: 150, height: 150, class: "img-thumbnail flex-shrink-0") if @idea.picture? %>
+</div>
+
+<div class="d-flex gap-3 py-3">
+  <%= link_to "Edit this idea", edit_idea_path(@idea), class: "btn btn-primary" %>
+  <%= link_to "Back to ideas", ideas_path, class: "btn btn-outline-secondary" %>
+  <%= button_to "Destroy this idea", @idea, method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "Are you sure?" } } %>
+</div>
+<h2>Comments</h2>
+<% if @comments.any? %>
+  <% @comments.each do |comment| %>
+    <div>
+      <p><strong><%= comment.user_name %></strong></p>
+      <p><%= comment.body %></p>
+      <%= button_to "Destroy this comment", idea_comment_path(@idea, comment), method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "Are you sure?" } } %>
+    </div>
+  <% end %>
+<% else %>
+  <p>No comments found.</p>
+<% end %>
+
+<h2>Add a new comment</h2>
+<%= render partial: "comments/form", locals: { idea: @idea } %>

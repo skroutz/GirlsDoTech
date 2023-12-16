@@ -1,0 +1,25 @@
+.fab {
+    color: rgb(150, 27, 133);
+}
+
+#ideas {
+    color: rgba(68, 10, 39, 0.945);
+}
+
+h1{
+    font-style: italic; color: blueviolet;
+}
+
+.boldtext {
+font-weight: bold; font-style: italic;
+}
+
+.navbar {
+    background-color: black ;
+}
+
+.nav-link:hover {
+    background-color: rgba(208, 169, 245, 0.308);
+    border-radius: 3px;
+}
+
